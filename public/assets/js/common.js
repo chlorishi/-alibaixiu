@@ -23,4 +23,4 @@ $.ajax({
         $('.avatar').attr('src', response.avatar);
         $('.profile .name').html(response.nickName);
     }
-})
+});

@@ -31,3 +31,16 @@ $.ajax({
     }
 });
 //获取最新发布数据
+
+$.ajax({
+    url: '/posts/lasted',
+    type: 'get',
+    success: function(response) {
+        console.log(response);
+
+        var html = template('lastedTpl', {
+            data: response
+        });
+        $('#lastedBox').html(html);
+    }
+});
